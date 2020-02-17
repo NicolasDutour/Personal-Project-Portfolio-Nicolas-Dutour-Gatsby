@@ -7,6 +7,7 @@ module.exports = {
     title: `Nicolas Dutour | Dév Web`,
     description: `Portfolio de Nicolas Dutour qui décrit les compétences en Html, Css, Javascript, React, Redux, Gatsby, Bootstrap, Styled-Components, jQuery, Material UI, NodeJs, PpostGreSql, Python, Django, MongoDB, ExpressJs, GraphQl. Il présente aussi mes différents projets réalisés`,
     author: `Nicolas Dutour`,
+    siteUrl: `https://nicolas-dutour.netlify.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,10 +20,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://nicolas-dutour.netlify.com/",
+        sitemap: "https://nicolas-dutour.netlify.com/sitemap.xml",
       },
     },
     {
@@ -45,8 +54,6 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
