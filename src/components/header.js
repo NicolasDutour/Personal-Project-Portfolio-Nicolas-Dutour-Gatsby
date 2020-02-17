@@ -119,8 +119,14 @@ const Header = ({ siteTitle }) => {
     <HeaderContainer>
       <Navbar>
         <Logo to="/">
-          <div>{siteTitle.slice(0, 14)}</div>{" "}
-          <div>{siteTitle.slice(16, 26)}</div>
+          {window.matchMedia("(max-width: 850px)").matches ? (
+            <>
+              <div>{siteTitle.slice(0, 14)}</div>
+              <div>{siteTitle.slice(16, 26)}</div>{" "}
+            </>
+          ) : (
+            siteTitle
+          )}
         </Logo>
         <StyledMenu onClick={openMenu} />
         <Navlinks>
