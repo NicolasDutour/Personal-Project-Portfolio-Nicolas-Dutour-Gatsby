@@ -75,7 +75,6 @@ const Divider = styled.div`
   width: 50px;
   height: 5px;
   background-color: #b12e1f;
-  margin-bottom: 60px;
 `
 
 const Contact = () => (

@@ -19,10 +19,9 @@ const Title = styled.h1`
 
 const SubTitle = styled.h2`
   font-size: 1.8rem;
-  margin: 30px 0;
+  margin: 10px 0 40px 0;
   color: #b12e1f;
   text-align: center;
-  margin-top: 40px;
 `
 
 const SkillsContainer = styled.div`

@@ -61,11 +61,6 @@ const StyledLinkMobile = styled(Link)`
     cursor: pointer;
     height: 100%;
 
-    &:nth-child(2) {
-      border-left: 1px solid ${props => props.theme.primary};
-      border-right: 1px solid ${props => props.theme.primary};
-    }
-
     &:focus,
     &:active {
       border: 1px solid ${props => props.theme.primary};

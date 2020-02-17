@@ -49,14 +49,14 @@ const StyledImage = styled(Img)`
 const Title = styled.h1`
   font-size: 2rem;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
   color: ${props => props.theme.secondary};
 `
 
 const SubTitle = styled.h2`
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 `
 const StyledLink = styled.a`
   color: #b12e1f;

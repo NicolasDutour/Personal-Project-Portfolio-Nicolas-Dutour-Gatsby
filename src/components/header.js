@@ -64,6 +64,7 @@ const StyledMenu = styled(FaAlignRight)`
 `
 
 const Logo = styled(Link)`
+  display: block;
   grid-area: logo;
   text-decoration: none;
   font-size: 2rem;
@@ -78,7 +79,7 @@ const Logo = styled(Link)`
   }
 
   @media all and (max-width: 1150px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `
 
@@ -117,7 +118,10 @@ const Header = ({ siteTitle }) => {
   return (
     <HeaderContainer>
       <Navbar>
-        <Logo to="/">{siteTitle}</Logo>
+        <Logo to="/">
+          <div>{siteTitle.slice(0, 14)}</div>{" "}
+          <div>{siteTitle.slice(16, 26)}</div>
+        </Logo>
         <StyledMenu onClick={openMenu} />
         <Navlinks>
           <StyledLink to="/">Home</StyledLink>
