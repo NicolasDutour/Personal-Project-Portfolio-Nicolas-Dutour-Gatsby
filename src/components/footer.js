@@ -36,6 +36,7 @@ const Menu = styled.footer`
     align-items: center;
     background-color: white;
     color: black;
+    border-top: 2px solid ${props => props.theme.primary};
   }
 `
 
@@ -58,6 +59,17 @@ const StyledLinkMobile = styled(Link)`
     font-size: 1.3rem;
     color: ${props => props.theme.secondary};
     cursor: pointer;
+    height: 100%;
+
+    &:nth-child(2) {
+      border-left: 1px solid ${props => props.theme.primary};
+      border-right: 1px solid ${props => props.theme.primary};
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid ${props => props.theme.primary};
+    }
   }
 `
 
