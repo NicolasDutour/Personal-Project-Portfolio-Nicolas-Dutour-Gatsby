@@ -10,8 +10,8 @@ const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: black;
-  opacity: 0.7;
+  background: linear-gradient(#000, #424242);
+  opacity: 0.8;
   z-index: 1;
 `
 
@@ -70,11 +70,11 @@ const ButtonWrapper = styled.div`
 const Button = styled.button`
   background: white;
   color: ${props => props.theme.secondary};
-  font-size: 1.5rem;
-  padding: 10px 20px;
+  font-size: 1.2rem;
+  padding: 10px 10px;
   border: 1px solid ${props => props.theme.primary};
-  border-radius: 3px;
-  width: 200px;
+  border-radius: 10px;
+  width: 150px;
   display: block;
 
   &:hover {
@@ -85,13 +85,13 @@ const Button = styled.button`
 const StyledLink = styled(Link)`
   background: white;
   color: ${props => props.theme.primary};
-  font-size: 1.5rem;
-  padding: 10px 20px;
+  font-size: 1.2rem;
+  padding: 10px 10px;
   border: 1px solid ${props => props.theme.primary};
-  border-radius: 3px;
+  border-radius: 10px;
   text-decoration: none;
   display: block;
-  width: 200px;
+  width: 150px;
   color: ${props => props.theme.secondary};
 
   &:hover {
