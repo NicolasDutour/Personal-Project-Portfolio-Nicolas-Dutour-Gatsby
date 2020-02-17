@@ -3,6 +3,7 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import SEO from "./seo"
+import { MdFileDownload } from "react-icons/md"
 
 const Overlay = styled.div`
   width: 100%;
@@ -75,7 +76,10 @@ const Button = styled.button`
   border: 1px solid ${props => props.theme.primary};
   border-radius: 10px;
   width: 150px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 
   &:hover {
     color: ${props => props.theme.primary};
@@ -90,7 +94,9 @@ const StyledLink = styled(Link)`
   border: 1px solid ${props => props.theme.primary};
   border-radius: 10px;
   text-decoration: none;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   color: ${props => props.theme.secondary};
 
@@ -102,6 +108,11 @@ const StyledLink = styled(Link)`
   @media all and (max-width: 767px) {
     margin-top: 10px;
   }
+`
+
+const StyledMdFileDownload = styled(MdFileDownload)`
+  font-size: 1.8rem;
+  color: ${props => props.theme.primary};
 `
 
 const Home = ({ className }) => (
@@ -150,10 +161,12 @@ const Home = ({ className }) => (
                 download="cv"
                 target="_blank"
               >
-                Mon CV
+                <StyledMdFileDownload /> <div>Mon CV</div>
               </Button>
 
-              <StyledLink to="/projects">Mes Projets</StyledLink>
+              <StyledLink to="/projects">
+                <div>Mes Projets</div>
+              </StyledLink>
             </ButtonWrapper>
           </HeroDetails>
         </BackgroundImage>
