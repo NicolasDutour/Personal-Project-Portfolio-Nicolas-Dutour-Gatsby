@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { FaAlignRight } from "react-icons/fa"
 import { Link } from "gatsby"
@@ -34,6 +34,19 @@ const Navlinks = styled.div`
   @media all and (max-width: 850px) {
     display: none;
   }
+`
+
+const NavlinksMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  background-color: white;
+  border-top: 2px solid ${props => props.theme.primary};
 `
 
 const StyledMenu = styled(FaAlignRight)`
@@ -83,18 +96,29 @@ const StyledLink = styled(Link)`
     border-bottom: 2px solid ${props => props.theme.primary};
   }
 
-  @media all and (max-width: 1150px) {
+  @media all and (max-width: 850px) {
+    font-size: 1.5rem;
+    padding: 5px 0;
+  }
+
+  @media all and (min-width: 851px) and (max-width: 1150px) {
     margin-left: 10px;
     font-size: 1rem;
   }
 `
 
 const Header = ({ siteTitle }) => {
+  const [toggle, setToggle] = useState(false)
+
+  const openMenu = () => {
+    setToggle(!toggle)
+  }
+
   return (
     <HeaderContainer>
       <Navbar>
         <Logo to="/">{siteTitle}</Logo>
-        <StyledMenu />
+        <StyledMenu onClick={openMenu} />
         <Navlinks>
           <StyledLink to="/">Home</StyledLink>
           <StyledLink to="/about">A Propos</StyledLink>
@@ -102,6 +126,15 @@ const Header = ({ siteTitle }) => {
           <StyledLink to="/projects">Projets</StyledLink>
           <StyledLink to="/contact">Contact</StyledLink>
         </Navlinks>
+        {toggle && (
+          <NavlinksMobile>
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/about">A Propos</StyledLink>
+            <StyledLink to="/skills">Compétences</StyledLink>
+            <StyledLink to="/projects">Projets</StyledLink>
+            <StyledLink to="/contact">Contact</StyledLink>
+          </NavlinksMobile>
+        )}
       </Navbar>
     </HeaderContainer>
   )
