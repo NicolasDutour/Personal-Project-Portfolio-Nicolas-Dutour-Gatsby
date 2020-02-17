@@ -17,7 +17,6 @@ const ProjectsContainer = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   text-align: center;
-  padding-top: 30px;
   color: ${props => props.theme.secondary};
 `
 

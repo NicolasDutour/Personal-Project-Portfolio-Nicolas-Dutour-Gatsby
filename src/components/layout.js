@@ -14,7 +14,7 @@ const theme = {
 }
 
 const Main = styled.div`
-  padding-top: 80px;
+  margin-top: 80px;
   padding-bottom: 80px;
 `
 

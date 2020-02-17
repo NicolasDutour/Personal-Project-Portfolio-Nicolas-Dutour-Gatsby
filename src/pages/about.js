@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
@@ -22,34 +20,18 @@ const AboutWrapper = styled.div`
 `
 
 const DetailsWrapper = styled.div`
-  width: 55%;
+  width: 70%;
 
   @media (max-width: 1160px) {
     flex-direction: column;
     margin-bottom: 30px;
     width: 80%;
   }
-`
-
-const ImageWrapper = styled.div`
-  width: 40%;
-
-  @media (max-width: 1160px) {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    width: 80%;
-  }
-`
-
-const StyledImage = styled(Img)`
-  border-radius: 10px;
 `
 
 const Title = styled.h1`
   font-size: 2rem;
   text-align: center;
-  margin-top: 10px;
   color: ${props => props.theme.secondary};
 `
 
@@ -83,17 +65,6 @@ const Divider = styled.div`
 `
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "about/dev.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
   return (
     <Layout id="about">
       <SEO title="Qui suis-je" />
@@ -172,9 +143,6 @@ const About = () => {
             pour découvrir d'autres projets.
           </p>
         </DetailsWrapper>
-        <ImageWrapper>
-          <StyledImage fluid={data.file.childImageSharp.fluid} />
-        </ImageWrapper>
       </AboutWrapper>
     </Layout>
   )

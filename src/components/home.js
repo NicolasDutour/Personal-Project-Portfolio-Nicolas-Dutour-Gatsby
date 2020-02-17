@@ -4,14 +4,23 @@ import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import SEO from "./seo"
 
+const Overlay = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 1;
+`
+
 const HeroDetails = styled.div`
-  background-color: #90a4ae;
   opacity: 0.9;
-  border-radius: 5px;
   text-align: center;
-  color: #455a64;
   width: 55%;
-  padding: 10px 0;
+  z-index: 2;
+  color: white;
 
   /* Small screens */
   @media all and (max-width: 767px) {
@@ -124,8 +133,8 @@ const Home = ({ className }) => (
           Tag="section"
           className={className}
           fluid={imageData}
-          backgroundColor={`#040e18`}
         >
+          <Overlay />
           <SEO title="Home" />
           <HeroDetails>
             <Title>Nicolas Dutour</Title>
@@ -155,7 +164,7 @@ const Home = ({ className }) => (
 
 const StyledHome = styled(Home)`
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 160px);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

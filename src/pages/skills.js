@@ -6,15 +6,10 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 
-const Container = styled.div`
-  background-color: #e0e0e0;
-`
-
 const Title = styled.h1`
   font-size: 2rem;
   text-align: center;
-  padding-top: 30px;
-  color: #000;
+  color: ${props => props.theme.secondary};
 `
 
 const SubTitle = styled.h2`
@@ -118,44 +113,42 @@ const Skills = () => {
   `)
 
   return (
-    <Layout>
-      <Container id="skills">
-        <SEO title="Compétences" />
-        <Title>Compétences</Title>
-        <DividerWrapper>
-          <Divider />
-        </DividerWrapper>
+    <Layout id="skills">
+      <SEO title="Compétences" />
+      <Title>Compétences</Title>
+      <DividerWrapper>
+        <Divider />
+      </DividerWrapper>
 
-        <SubTitle>Frontend</SubTitle>
-        <SkillsContainer>
-          {data.frontend.edges.map(edge => (
-            <Skill key={edge.node.id}>
-              <StyledImage fixed={edge.node.childImageSharp.fixed} />
-              <Name>{edge.node.name.toUpperCase().replace("_", " ")}</Name>
-            </Skill>
-          ))}
-        </SkillsContainer>
+      <SubTitle>Frontend</SubTitle>
+      <SkillsContainer>
+        {data.frontend.edges.map(edge => (
+          <Skill key={edge.node.id}>
+            <StyledImage fixed={edge.node.childImageSharp.fixed} />
+            <Name>{edge.node.name.toUpperCase().replace("_", " ")}</Name>
+          </Skill>
+        ))}
+      </SkillsContainer>
 
-        <SubTitle>Backend</SubTitle>
-        <SkillsContainer>
-          {data.backend.edges.map(edge => (
-            <Skill key={edge.node.id}>
-              <StyledImage fixed={edge.node.childImageSharp.fixed} />
-              <Name>{edge.node.name.toUpperCase().replace("_", " ")}</Name>
-            </Skill>
-          ))}
-        </SkillsContainer>
+      <SubTitle>Backend</SubTitle>
+      <SkillsContainer>
+        {data.backend.edges.map(edge => (
+          <Skill key={edge.node.id}>
+            <StyledImage fixed={edge.node.childImageSharp.fixed} />
+            <Name>{edge.node.name.toUpperCase().replace("_", " ")}</Name>
+          </Skill>
+        ))}
+      </SkillsContainer>
 
-        <SubTitle>Outils</SubTitle>
-        <SkillsContainer>
-          {data.tools.edges.map(edge => (
-            <Skill key={edge.node.id}>
-              <StyledImage fixed={edge.node.childImageSharp.fixed} />
-              <Name>{edge.node.name.toUpperCase().replace("_", " ")}</Name>
-            </Skill>
-          ))}
-        </SkillsContainer>
-      </Container>
+      <SubTitle>Outils</SubTitle>
+      <SkillsContainer>
+        {data.tools.edges.map(edge => (
+          <Skill key={edge.node.id}>
+            <StyledImage fixed={edge.node.childImageSharp.fixed} />
+            <Name>{edge.node.name.toUpperCase().replace("_", " ")}</Name>
+          </Skill>
+        ))}
+      </SkillsContainer>
     </Layout>
   )
 }

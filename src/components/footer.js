@@ -16,6 +16,7 @@ const FooterWrapper = styled.footer`
   background-color: black;
   border-bottom: 1px solid black;
   color: white;
+  z-index: 3;
 
   @media all and (max-width: 600px) {
     display: none;

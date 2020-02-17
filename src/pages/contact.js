@@ -14,7 +14,6 @@ const FormWrapper = styled.div`
 
 const Title = styled.h1`
   font-size: 2rem;
-  margin-top: 30px;
   text-align: center;
   color: ${props => props.theme.secondary};
 `
