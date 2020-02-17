@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 import { FaRegFolderOpen, FaDumbbell } from "react-icons/fa"
 import { IoMdContact } from "react-icons/io"
@@ -41,13 +40,9 @@ const Menu = styled.footer`
   }
 `
 
-const StyledLink = styled(Link)`
+const Author = styled.div`
   color: ${props => props.theme.primary};
   margin: 0 10px;
-
-  &:hover {
-    color: ${props => props.theme.primary};
-  }
 `
 
 const StyledLinkMobile = styled(Link)`
@@ -96,7 +91,7 @@ const StyledIconSkills = styled(FaDumbbell)`
   }
 `
 
-const LinkMenu = styled.a`
+const LinkMenu = styled.div`
   font-size: 1rem;
 `
 
@@ -104,14 +99,7 @@ const Footer = ({ siteAuthor }) => (
   <>
     <FooterWrapper>
       <div>© {new Date().getFullYear()}, développé par </div>
-      <StyledLink
-        href="https://www.nicolasdutour.com"
-        target="_blank"
-        rel="noopener"
-      >
-        {siteAuthor}
-      </StyledLink>{" "}
-      <div>avec Gatsby et ContentFul</div>
+      <Author>{siteAuthor}</Author> <div>avec Gatsby et ContentFul</div>
     </FooterWrapper>
     <Menu>
       <StyledLinkMobile to="/skills">
@@ -129,13 +117,5 @@ const Footer = ({ siteAuthor }) => (
     </Menu>
   </>
 )
-
-Footer.propTypes = {
-  siteAuthor: PropTypes.string,
-}
-
-Footer.defaultProps = {
-  siteAuthor: ``,
-}
 
 export default Footer
