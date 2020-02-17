@@ -131,7 +131,9 @@ const Home = ({ className }) => (
             <Title>Nicolas Dutour</Title>
             <SubTitle>Développeur Web Autodidacte</SubTitle>
 
-            <Details>Je crée de l'Expérience</Details>
+            <Details>
+              Expériences Utilisateurs, Interfaces Uniques, Performance
+            </Details>
             <ButtonWrapper>
               <Button
                 as="a"
