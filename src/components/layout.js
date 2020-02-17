@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 
 import Header from "./header"
+import Footer from "./footer"
 
 import "./layout.css"
 
@@ -28,6 +29,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
+      <Footer siteAuthor={data.site.siteMetadata.author} />
     </ThemeProvider>
   )
 }
