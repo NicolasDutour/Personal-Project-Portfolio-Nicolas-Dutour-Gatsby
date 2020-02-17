@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Nicolas Dutour | Dév Web`,
+    description: `Portfolio de Nicolas Dutour qui décrit les compétences en Html, Css, Javascript, React, Redux, Gatsby, Bootstrap, Styled-Components, jQuery, Material UI, NodeJs, PpostGreSql, Python, Django, MongoDB, ExpressJs, GraphQl. Il présente aussi mes différents projets réalisés`,
+    author: `Nicolas Dutour`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,13 +36,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Portfolio Nicolas Dutour Développeur Web`,
+        short_name: `Portfolio`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
