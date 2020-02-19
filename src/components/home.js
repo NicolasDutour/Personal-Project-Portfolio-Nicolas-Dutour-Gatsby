@@ -5,6 +5,8 @@ import BackgroundImage from "gatsby-background-image"
 import SEO from "./seo"
 import { MdFileDownload } from "react-icons/md"
 
+import Slider from "./slider"
+
 const Overlay = styled.div`
   width: 100%;
   height: 100%;
@@ -25,34 +27,17 @@ const HeroDetails = styled.div`
 
   /* Small screens */
   @media all and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-  }
-`
-
-const Title = styled.h1`
-  font-size: 3.5rem;
-  letter-spacing: 6px;
-  margin-bottom: 20px;
-
-  /* Small screens */
-  @media all and (max-width: 767px) {
-    font-size: 1.8rem;
-  }
-`
-
-const SubTitle = styled.h2`
-  font-size: 2rem;
-  letter-spacing: 6px;
-  margin-bottom: 20px;
-
-  /* Small screens */
-  @media all and (max-width: 767px) {
-    font-size: 1.2rem;
+    height: 100%;
   }
 `
 
 const Details = styled.h3`
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 `
 
 const ButtonWrapper = styled.div`
@@ -106,7 +91,7 @@ const StyledLink = styled(Link)`
 
   /* Small screens */
   @media all and (max-width: 767px) {
-    margin-top: 10px;
+    display: none;
   }
 `
 
@@ -148,9 +133,6 @@ const Home = ({ className }) => (
           <Overlay />
           <SEO title="Home" />
           <HeroDetails>
-            <Title>Nicolas Dutour</Title>
-            <SubTitle>Développeur Web Autodidacte</SubTitle>
-
             <Details>
               Expériences Utilisateurs, Interfaces Uniques, Performance
             </Details>
@@ -168,6 +150,7 @@ const Home = ({ className }) => (
                 <div>Mes Projets</div>
               </StyledLink>
             </ButtonWrapper>
+            <Slider />
           </HeroDetails>
         </BackgroundImage>
       )
