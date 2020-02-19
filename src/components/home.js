@@ -60,7 +60,7 @@ const SubTitle = styled.h2`
 
 const Ul = styled.ul`
   list-style: none;
-  margin: 0;
+  margin: 15px 0 0 0;
   padding: 0;
 `
 
@@ -68,7 +68,7 @@ const Li = styled.li`
   margin-bottom: 10px;
   font-size: 1.5rem;
   @media all and (max-width: 767px) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 `
 
