@@ -10,6 +10,20 @@ const Image = styled(Img)`
   border-radius: 20px;
 `
 
+const Title = styled.h4`
+  margin-top: 10px;
+  margin-bottom: 30px;
+`
+
+const Button = styled.button`
+  background-color: ${props => props.theme.primary};
+  color: #fff;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid ${props => props.theme.primary};
+`
+
 const Slider = () => {
   const data = useStaticQuery(graphql`
     query getProjectsSliderQuery {
@@ -22,6 +36,7 @@ const Slider = () => {
               }
             }
             webSiteName
+            linkWebSite
             contentful_id
           }
         }
@@ -49,6 +64,15 @@ const Slider = () => {
         {data.allContentfulProjects.edges.map(edge => (
           <div className="swiper-slide" key={edge.node.contentful_id}>
             <Image fluid={edge.node.thumbnail.fluid} />
+            <Title> {edge.node.webSiteName} </Title>
+            <Button
+              as="a"
+              href={edge.node.linkWebSite}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Site Web
+            </Button>
           </div>
         ))}
       </div>

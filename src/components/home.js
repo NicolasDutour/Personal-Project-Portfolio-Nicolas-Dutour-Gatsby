@@ -24,26 +24,58 @@ const HeroDetails = styled.div`
   width: 55%;
   z-index: 2;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 
-  /* Small screens */
   @media all and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
   }
 `
 
-const Details = styled.h3`
-  font-size: 1.3rem;
+const Title = styled.h1`
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  @media all and (max-width: 767px) {
+    display: none;
+    font-size: 1.5rem;
+  }
+`
+
+const SubTitle = styled.h2`
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  @media all and (max-width: 767px) {
+    display: none;
+    font-size: 1.2rem;
+  }
+`
+
+const Ul = styled.ul`
+  list-style: none;
+  padding: 0;
+`
+
+const Li = styled.li`
+  padding: 10px;
+  font-size: 1.5rem;
+  @media all and (max-width: 767px) {
+    font-size: 1.2rem;
+  }
 `
 
 const ButtonWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 20px;
+  width: 100%;
 
   /* Small screens */
   @media all and (max-width: 767px) {
@@ -133,9 +165,15 @@ const Home = ({ className }) => (
           <Overlay />
           <SEO title="Home" />
           <HeroDetails>
-            <Details>
-              Expériences Utilisateurs, Interfaces Uniques, Performance
-            </Details>
+            <Title>Nicolas Dutour</Title>
+            <SubTitle>Développeur Web Autodidacte</SubTitle>
+
+            <Ul>
+              <Li>Expériences Utilisateurs</Li>
+              <Li>Interfaces Uniques</Li>
+              <Li>Performance</Li>
+            </Ul>
+
             <ButtonWrapper>
               <Button
                 as="a"
