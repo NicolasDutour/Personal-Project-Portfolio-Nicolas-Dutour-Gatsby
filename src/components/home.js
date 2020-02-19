@@ -60,11 +60,12 @@ const SubTitle = styled.h2`
 
 const Ul = styled.ul`
   list-style: none;
+  margin: 0;
   padding: 0;
 `
 
 const Li = styled.li`
-  padding: 10px;
+  margin-bottom: 10px;
   font-size: 1.5rem;
   @media all and (max-width: 767px) {
     font-size: 1.2rem;
@@ -74,7 +75,6 @@ const Li = styled.li`
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
   width: 100%;
 
   /* Small screens */
