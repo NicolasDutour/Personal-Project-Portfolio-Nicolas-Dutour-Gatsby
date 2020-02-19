@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+// import { useStaticQuery, graphql } from "gatsby"
+// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 
@@ -12,46 +12,59 @@ const Title = styled.h1`
   color: ${props => props.theme.secondary};
 `
 
-const SubTitle = styled.h2`
-  font-size: 1.8rem;
-  margin: 10px 0 40px 0;
-  color: #b12e1f;
-  text-align: center;
-`
-
 const SkillsContainer = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto 40px auto;
+  border-right: 2px solid ${props => props.theme.primary};
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+
+  @media all and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 0;
+  }
 `
 
-const Name = styled.div`
-  font-size: 1rem;
+const SkillTitle = styled.div`
+  font-size: 2rem;
+  padding: 10px;
+  color: ${props => props.theme.primary};
+`
+
+const SkillsList = styled.div`
+  background-color: #0277bd;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media all and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: white;
+    border: 1px solid #0277bd;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+  }
 `
 
 const Skill = styled.div`
-  width: 20%;
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: white;
+  margin-right: 20px;
 
-  @media all and (max-width: 576px) {
-    width: 50%;
-  }
-
-  @media all and (min-width: 577px) and (max-width: 960px) {
-    width: 30%;
-  }
-`
-
-const StyledImage = styled(Img)`
-  border-radius: 100px;
-  transition: 1s;
-
-  &:hover {
-    transition: 1s;
-    transform: rotate(360deg);
+  @media all and (max-width: 767px) {
+    color: black;
+    margin-right: 0;
   }
 `
 
@@ -68,49 +81,49 @@ const Divider = styled.div`
 `
 
 const Skills = () => {
-  const data = useStaticQuery(graphql`
-    query getImagesQuery {
-      frontend: allFile(filter: { relativeDirectory: { eq: "frontend" } }) {
-        edges {
-          node {
-            id
-            name
-            childImageSharp {
-              fixed(width: 80, height: 80) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-      backend: allFile(filter: { relativeDirectory: { eq: "backend" } }) {
-        edges {
-          node {
-            id
-            name
-            childImageSharp {
-              fixed(width: 80, height: 80) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-      tools: allFile(filter: { relativeDirectory: { eq: "tools" } }) {
-        edges {
-          node {
-            id
-            name
-            childImageSharp {
-              fixed(width: 80, height: 80) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query getImagesQuery {
+  //     frontend: allFile(filter: { relativeDirectory: { eq: "frontend" } }) {
+  //       edges {
+  //         node {
+  //           id
+  //           name
+  //           childImageSharp {
+  //             fixed(width: 80, height: 80) {
+  //               ...GatsbyImageSharpFixed
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //     backend: allFile(filter: { relativeDirectory: { eq: "backend" } }) {
+  //       edges {
+  //         node {
+  //           id
+  //           name
+  //           childImageSharp {
+  //             fixed(width: 80, height: 80) {
+  //               ...GatsbyImageSharpFixed
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //     tools: allFile(filter: { relativeDirectory: { eq: "tools" } }) {
+  //       edges {
+  //         node {
+  //           id
+  //           name
+  //           childImageSharp {
+  //             fixed(width: 80, height: 80) {
+  //               ...GatsbyImageSharpFixed
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <Layout id="skills">
@@ -120,7 +133,49 @@ const Skills = () => {
         <Divider />
       </DividerWrapper>
 
-      <SubTitle>Frontend</SubTitle>
+      <SkillsContainer>
+        <SkillTitle>Frontend</SkillTitle>
+        <SkillsList>
+          <Skill>Html5</Skill>
+          <Skill>Css3</Skill>
+          <Skill>Javascript</Skill>
+          <Skill>jQuery</Skill>
+          <Skill>ReactJs</Skill>
+          <Skill>Redux</Skill>
+          <Skill>Bootstrap</Skill>
+          <Skill>Material UI</Skill>
+          <Skill>Styled Components (Css-in-Js)</Skill>
+          <Skill>Gatsby</Skill>
+        </SkillsList>
+      </SkillsContainer>
+
+      <SkillsContainer>
+        <SkillTitle>Backend</SkillTitle>
+        <SkillsList>
+          <Skill>NodeJs</Skill>
+          <Skill>Express</Skill>
+          <Skill>MongoDB</Skill>
+          <Skill>GraphQL</Skill>
+          <Skill>Python</Skill>
+          <Skill>Django (DRF)</Skill>
+          <Skill>PostGreSQL</Skill>
+        </SkillsList>
+      </SkillsContainer>
+
+      <SkillsContainer>
+        <SkillTitle>Outils</SkillTitle>
+        <SkillsList>
+          <Skill>Git</Skill>
+          <Skill>Github</Skill>
+          <Skill>Postman</Skill>
+          <Skill>Slack</Skill>
+          <Skill>Trello</Skill>
+          <Skill>ContentFul</Skill>
+          <Skill>Netlify</Skill>
+        </SkillsList>
+      </SkillsContainer>
+
+      {/* <SubTitle>Frontend</SubTitle>
       <SkillsContainer>
         {data.frontend.edges.map(edge => (
           <Skill key={edge.node.id}>
@@ -148,7 +203,7 @@ const Skills = () => {
             <Name>{edge.node.name.toUpperCase().replace("_", " ")}</Name>
           </Skill>
         ))}
-      </SkillsContainer>
+      </SkillsContainer> */}
     </Layout>
   )
 }
