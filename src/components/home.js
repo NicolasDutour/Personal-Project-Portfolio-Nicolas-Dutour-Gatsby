@@ -32,7 +32,7 @@ const HeroDetails = styled.div`
   height: 100%;
 
   @media all and (max-width: 767px) {
-    justify-content: space-around;
+    justify-content: center;
   }
 `
 

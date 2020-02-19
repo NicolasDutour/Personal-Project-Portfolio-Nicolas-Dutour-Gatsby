@@ -12,7 +12,7 @@ const Image = styled(Img)`
 
 const Title = styled.h4`
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 `
 
 const Button = styled.button`
