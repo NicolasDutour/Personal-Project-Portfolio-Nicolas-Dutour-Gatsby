@@ -21,6 +21,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
