@@ -101,6 +101,10 @@ const Button = styled.button`
   &:hover {
     color: ${props => props.theme.primary};
   }
+
+  @media all and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
 `
 
 const StyledLink = styled(Link)`
