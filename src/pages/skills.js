@@ -85,8 +85,8 @@ const Skills = () => {
       allContentfulSkills {
         edges {
           node {
-            backend
             frontend
+            backend
             tools
           }
         }
@@ -106,7 +106,7 @@ const Skills = () => {
         <SkillTitle>Frontend</SkillTitle>
         <SkillsList>
           {data.allContentfulSkills.edges.map(edge =>
-            edge.node.frontend.split(",").map(skill => <Skill> {skill} </Skill>)
+            edge.node.frontend.map(skill => <Skill> {skill} </Skill>)
           )}
         </SkillsList>
       </SkillsContainer>
@@ -115,7 +115,7 @@ const Skills = () => {
         <SkillTitle>Backend</SkillTitle>
         <SkillsList>
           {data.allContentfulSkills.edges.map(edge =>
-            edge.node.backend.split(",").map(skill => <Skill> {skill} </Skill>)
+            edge.node.backend.map(skill => <Skill> {skill} </Skill>)
           )}
         </SkillsList>
       </SkillsContainer>
@@ -124,7 +124,7 @@ const Skills = () => {
         <SkillTitle>Outils</SkillTitle>
         <SkillsList>
           {data.allContentfulSkills.edges.map(edge =>
-            edge.node.tools.split(",").map(skill => <Skill> {skill} </Skill>)
+            edge.node.tools.map(skill => <Skill> {skill} </Skill>)
           )}
         </SkillsList>
       </SkillsContainer>
