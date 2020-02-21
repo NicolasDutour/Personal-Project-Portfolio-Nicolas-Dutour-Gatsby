@@ -90,9 +90,8 @@ const About = () => {
             </StyledLink>
           </p>
           <p>
-            Après quelques mois à coder sans relâche mais avec toujours autant
-            de plaisir, je décide, en 2018, d'approfondir mes compétences en
-            suivant un des parcours proposés par OpenClassrooms. Celui de{" "}
+            Je décide, en 2018, d'approfondir mes compétences en suivant un des
+            parcours proposés par OpenClassrooms. Celui de{" "}
             <StyledLink
               href="https://openclassrooms.com/fr/paths/48-developpeur-web-junior"
               target="_blank"
@@ -109,27 +108,14 @@ const About = () => {
           </p>
           <p>
             Après avoir développé différents projets avec <Show>ReactJs</Show>,
-            je me suis intéressé au back-end, notamment <Show>NodeJs</Show> avec{" "}
-            <Show>Express</Show> et <Show>MongoDB</Show>.
+            je me suis intéressé au back-end, notamment <Show>NodeJs</Show> et{" "}
+            <Show>Python</Show> avec son Framework <Show>Django</Show>.
           </p>
           <p>
             Je développe également des sites web vitrines en freelance pour des
             clients en utilisant Gatsby. Je peux ainsi créer votre site sur
             mesure qui est performant, référencé naturellement (SEO), qui
             respecte les normes W3C et l'accessibilité.
-          </p>
-          <p>
-            Votre site sera responsive. C'est à dire qu'il s'adaptera à tout
-            type d'appareil (Ordinateurs, Tablettes, Mobile).
-          </p>
-          <p>
-            Je m'occupe de mettre aussi en place un système de gestion de
-            contenu avec ContentFul. Vous pouvez ainsi gérer tout seul l'ajout
-            de textes et images sans mon intervention.
-          </p>
-          <p>
-            Je mets pour vous en place votre site sur un hébergeur web et vous
-            forme si vous le désirez sur l'utilisation de ContentFul.
           </p>
           <p>
             Pour les développeurs, vous pouvez aller voir mon profil{" "}
