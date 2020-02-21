@@ -140,7 +140,7 @@ const Home = ({ className }) => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "banner.jpg" }) {
+        desktop: file(relativePath: { eq: "banner.webp" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
@@ -182,6 +182,7 @@ const Home = ({ className }) => (
               <Button
                 as="a"
                 href={data.cv.cv.file.url}
+                rel="noopener"
                 download="cv"
                 target="_blank"
               >

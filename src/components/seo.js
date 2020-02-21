@@ -73,7 +73,6 @@ function SEO({ description, lang, meta, title }) {
         rel="stylesheet"
         href="https://unpkg.com/swiper/css/swiper.css"
       ></link>
-      <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     </Helmet>
   )
 }
