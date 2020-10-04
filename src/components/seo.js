@@ -73,6 +73,7 @@ function SEO({ description, lang, meta, title }) {
         rel="stylesheet"
         href="https://unpkg.com/swiper/css/swiper.css"
       ></link>
+      <meta name="google-site-verification" content="R2zHvMq62HMbu_9RamA5wurLCtErcsHU6JxBJC5VdhU" />
     </Helmet>
   )
 }
