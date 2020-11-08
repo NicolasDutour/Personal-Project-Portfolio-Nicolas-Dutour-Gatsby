@@ -28,16 +28,16 @@ export const Title = styled.h1`
 `
 
 export const Input = styled.input`
-  display: block;
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0 20px 0;
-  box-sizing: border-box;
-  border-radius: 10px;
-  border: 1px solid black;
-  &:focus {
-    outline: none;
-  }
+    display: block;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0 20px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid black;
+    &:focus {
+      outline: none;
+    }
 `
 
 export const Textarea = styled.textarea`
