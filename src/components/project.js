@@ -1,7 +1,7 @@
 import React from "react"
 import { ProjectWrapper, ImageWrapper, Image, Title, Skills, Description } from '../Styles/Project'
 
-const Project = ({ data: { node: { thumbnail, webSiteName, languages, description, linkWebSite, linkGithub } } }) => {
+const Project = ({ data: { node: { thumbnail, webSiteName, languages, description, linkWebSite } } }) => {
   return (
     <ProjectWrapper
       as="a"

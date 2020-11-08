@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
@@ -6,11 +6,11 @@ import { Title, SkillsContainer, Skill, DividerWrapper, Divider, SkillDetails, S
 
 const Skills = () => {
 
-  const [front, setFront] = useState(['Html5', 'Css3'])
-  const [front2, setFront2] = useState(['Javascript', 'ReactJs', 'Gatsby'])
-  const [tools, setTools] = useState(['Material UI', 'Bootstrap', 'Styled-Components', 'Contentful'])
-  const [python, setPython] = useState(['Python', 'Django', 'PostgreSQL'])
-  const [node, setNode] = useState(['NodeJs', 'MongoDB'])
+  const front = ['Html5', 'Css3']
+  const front2 = ['Javascript', 'ReactJs', 'Gatsby']
+  const tools = ['Material UI', 'Bootstrap', 'Styled-Components', 'Contentful']
+  const python = ['Python', 'Django', 'PostgreSQL']
+  const node = ['NodeJs', 'MongoDB']
 
   return (
     <Layout id="skills">
