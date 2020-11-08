@@ -1,36 +1,10 @@
 import React from "react"
-import styled from "styled-components"
-import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Project from "../components/project"
 
-const ProjectsContainer = styled.div`
-  width: 80%;
-  margin: 0 auto 40px auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-`
-
-const Title = styled.h1`
-  font-size: 2rem;
-  text-align: center;
-  color: ${props => props.theme.secondary};
-`
-
-const DividerWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-`
-
-const Divider = styled.div`
-  width: 50px;
-  height: 5px;
-  background-color: #b12e1f;
-`
+import { ProjectsContainer, Title, DividerWrapper, Divider, ProjectDetails } from '../Styles/Projects'
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -59,14 +33,16 @@ const Projects = () => {
   return (
     <Layout id="projects">
       <SEO title="Projets" />
-      <Title>Projets</Title>
-      <DividerWrapper>
-        <Divider />
-      </DividerWrapper>
       <ProjectsContainer>
-        {data.allContentfulProjects.edges.map(edge => (
-          <Project key={edge.node.contentful_id} data={edge} />
-        ))}
+        <Title>Projets</Title>
+        <DividerWrapper>
+          <Divider />
+        </DividerWrapper>
+        <ProjectDetails>
+          {data.allContentfulProjects.edges.map(edge => (
+            <Project key={edge.node.contentful_id} data={edge} />
+          ))}
+        </ProjectDetails>
       </ProjectsContainer>
     </Layout>
   )

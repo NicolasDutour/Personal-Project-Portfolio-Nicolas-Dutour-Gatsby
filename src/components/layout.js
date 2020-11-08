@@ -1,22 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled, { ThemeProvider } from "styled-components"
+import { ThemeProvider } from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
 
 import "./layout.css"
+import { Main } from '../Styles/Main'
 
 const theme = {
   primary: "#b12e1f",
-  secondary: "#767676",
+  secondary: "#fff",
+  grey: "#767676"
 }
 
-const Main = styled.div`
-  margin-top: 80px;
-  padding-bottom: 80px;
-`
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,11 +29,15 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const { title, author } = data.site.siteMetadata
+
   return (
     <ThemeProvider theme={theme}>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {/* <MainSite> */}
+      <Header siteTitle={title} />
       <Main>{children}</Main>
-      <Footer siteAuthor={data.site.siteMetadata.author} />
+      <Footer siteAuthor={author} />
+      {/* </MainSite> */}
     </ThemeProvider>
   )
 }
