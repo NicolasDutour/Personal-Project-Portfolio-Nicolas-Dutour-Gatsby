@@ -20,10 +20,9 @@ export const Form = styled.form`
 `
 
 export const Title = styled.h1`
-    margin-top: 30px;
+    padding-top: 30px;
     font-size: 2rem;
     text-align: center;
-    padding-top: 100px;
     color: ${props => props.theme.secondary};
 `
 

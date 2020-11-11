@@ -4,12 +4,9 @@ import { IoMdContact } from "react-icons/io"
 import { Link } from "gatsby"
 
 export const FooterWrapper = styled.footer`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
-  height: 80px;
+  height: 10vh;
   align-items: center;
   background-color: #202330;
   color: white;

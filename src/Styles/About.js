@@ -3,9 +3,6 @@ import styled from "styled-components"
 export const DetailsWrapper = styled.div`
     background-color: #202330;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100%;
 
   @media (max-width: 1160px) {
@@ -16,10 +13,9 @@ export const DetailsWrapper = styled.div`
 `
 
 export const Title = styled.h1`
-  margin-top: 30px;
+  padding-top: 30px;
   font-size: 2rem;
   text-align: center;
-  padding-top: 100px;
   color: ${props => props.theme.secondary};
 `
 
@@ -31,11 +27,14 @@ export const SubTitle = styled.h2`
 `
 
 export const Description = styled.div`
+  width: 70%;
+  margin: auto;
   margin-top: 50px;
 `
 
-export const Para = styled.p`
+export const Para = styled.div`
   text-align: left;
+  margin-bottom: 30px;
 `
 
 export const StyledLink = styled.a`

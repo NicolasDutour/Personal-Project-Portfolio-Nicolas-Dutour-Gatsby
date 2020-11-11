@@ -3,9 +3,6 @@ import styled from "styled-components"
 export const ProjectsContainer = styled.div`
     background-color: #202330;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100%;
 `
 
@@ -17,10 +14,9 @@ export const ProjectDetails = styled.div`
 `
 
 export const Title = styled.h1`
-    margin-top: 30px;
+    padding-top: 30px;
     font-size: 2rem;
     text-align: center;
-    padding-top: 100px;
     color: ${props => props.theme.secondary};
 `
 

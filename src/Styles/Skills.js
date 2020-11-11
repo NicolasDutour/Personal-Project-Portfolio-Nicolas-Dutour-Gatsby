@@ -4,26 +4,21 @@ export const SkillDetails = styled.div`
     background-color: #202330;
     text-align: center;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100%;
 `
 
 export const Title = styled.h1`
-    margin-top: 30px;
+    padding-top: 30px;
     font-size: 2rem;
     text-align: center;
-    padding-top: 100px;
     color: ${props => props.theme.secondary};
 `
 
 export const SkillsContainer = styled.div`
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 
     @media all and (max-width: 767px) {
         flex-direction: column;
@@ -44,7 +39,6 @@ export const SkillGroup = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
 `
 
 export const Skill = styled.div`

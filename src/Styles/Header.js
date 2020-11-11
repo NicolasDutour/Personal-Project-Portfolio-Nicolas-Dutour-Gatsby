@@ -7,11 +7,11 @@ export const HeaderContainer = styled.header`
   top: 0;
   width: 100%;
   background-color: #202330;
-  height: 80px;
+  border-bottom: 1px solid white;
+  height: 10vh;
 `
 
 export const Navbar = styled.nav`
-  width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
