@@ -42,8 +42,9 @@ export const NavlinksMobile = styled.div`
   position: absolute;
   top: 80px;
   width: 100%;
-  background-color: white;
+  background-color: #202330;
   border-top: 2px solid ${props => props.theme.primary};
+  border-bottom: 2px solid ${props => props.theme.primary};
 `
 
 export const StyledMenu = styled(FaAlignRight)`
