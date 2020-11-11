@@ -6,8 +6,6 @@ export const DetailsWrapper = styled.div`
     height: 100%;
 
   @media (max-width: 1160px) {
-    flex-direction: column;
-    margin-bottom: 30px;
     padding: 0 50px;
   }
 `
@@ -28,8 +26,11 @@ export const SubTitle = styled.h2`
 
 export const Description = styled.div`
   width: 70%;
-  margin: auto;
-  margin-top: 50px;
+  margin: 50px auto 10vh auto;
+
+  @media (max-width: 1160px) {
+    width: 100%;
+  }
 `
 
 export const Para = styled.div`
