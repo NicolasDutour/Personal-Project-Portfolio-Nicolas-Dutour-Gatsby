@@ -4,10 +4,8 @@ export const FormWrapper = styled.div`
     margin: 0 auto;
     background-color: #202330;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100%;
+    width: 60%;
 
     @media all and (max-width: 960px) {
         width: 90%;
@@ -16,7 +14,6 @@ export const FormWrapper = styled.div`
 
 export const Form = styled.form`
     margin-top: 30px;
-    width: 40%;
 `
 
 export const Title = styled.h1`
@@ -37,6 +34,10 @@ export const Input = styled.input`
     &:focus {
       outline: none;
     }
+
+    @media all and (max-width: 960px) {
+      width: 100%;
+  }
 `
 
 export const Textarea = styled.textarea`
@@ -70,6 +71,10 @@ export const Button = styled.input`
     background-color: white;
     color: #b12e1f;
   }
+
+  @media all and (max-width: 960px) {
+    width: 100%;
+}
 `
 
 export const DividerWrapper = styled.div`
