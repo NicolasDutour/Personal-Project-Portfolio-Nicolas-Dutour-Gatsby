@@ -13,7 +13,6 @@ export const HeroDetails = styled.div`
     height: 100%;
 
     @media all and (max-width: 767px) {
-    justify-content: center;
     }
 `
 
@@ -24,8 +23,7 @@ export const Title = styled.h1`
     color: white;
     
     @media all and (max-width: 767px) {
-        display: none;
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
 `
 
@@ -35,8 +33,7 @@ export const SubTitle = styled.h2`
     margin-top: 10px;
     color: white;
     @media all and (max-width: 767px) {
-    display: none;
-    font-size: 1.2rem;
+        font-size: 2rem;
     }
 `
 

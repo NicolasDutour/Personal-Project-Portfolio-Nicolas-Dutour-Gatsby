@@ -11,6 +11,10 @@ export const ProjectDetails = styled.div`
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+
+    @media all and (max-width: 960px) {
+        margin-bottom: 10vh;
+    }
 `
 
 export const Title = styled.h1`
