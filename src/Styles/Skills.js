@@ -4,7 +4,6 @@ export const SkillDetails = styled.div`
     background-color: #202330;
     text-align: center;
     color: white;
-    height: 100%;
 `
 
 export const Title = styled.h1`
@@ -18,20 +17,19 @@ export const SkillsContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     height: 100%;
 
-    @media all and (max-width: 767px) {
+    @media all and (max-width: 960px) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: 0;
     }
-`
 
-export const SkillTitle = styled.div`
-    font-size: 2rem;
-    padding: 10px;
-    color: ${props => props.theme.primary};
+    @media all and (max-width: 767px) {
+        display: block;
+        margin-bottom: 10vh;
+    }
 `
 
 export const SkillGroup = styled.div`
@@ -39,12 +37,25 @@ export const SkillGroup = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media all and (max-width: 960px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media all and (max-width: 767px) {
+        display: block;
+    }
 `
 
 export const Skill = styled.div`
     font-size: 1.2rem;
     font-weight: bold;
-    color: ${props => (props.front && "#FF5722") || (props.tools && '#26A69A') || (props.python && '#EEFF41') || (props.node && '#039BE5')};
+    color: ${props => (props.front && "#FF5722")
+        || (props.tools && '#26A69A')
+        || (props.python && '#EEFF41')
+        || (props.node && '#039BE5')};
     box-shadow: ${props => (props.front && "0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2)")
         || (props.tools && '0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2)')
         || (props.python && '0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2)')
@@ -57,9 +68,11 @@ export const Skill = styled.div`
     border-radius: 20px;
     margin: 20px 50px;
 
+    @media all and (max-width: 960px) {
+        margin: 0 10px 20px 10px;
+    }
     @media all and (max-width: 767px) {
-        color: black;
-        margin-right: 0;
+        width: 100%;
     }
 `
 
