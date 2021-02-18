@@ -72,7 +72,9 @@ export const Skill = styled.div`
         margin: 0 10px 20px 10px;
     }
     @media all and (max-width: 767px) {
-        width: 100%;
+        width: 90%;
+        justify-content: center;
+        margin: auto;
     }
 `
 
