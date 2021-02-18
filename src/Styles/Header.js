@@ -9,6 +9,7 @@ export const HeaderContainer = styled.header`
   background-color: #202330;
   border-bottom: 1px solid white;
   height: 10vh;
+  z-index: 1;
 `
 
 export const Navbar = styled.nav`
