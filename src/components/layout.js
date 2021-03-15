@@ -33,11 +33,9 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      {/* <MainSite> */}
       <Header siteTitle={title} />
       <Main>{children}</Main>
       <Footer siteAuthor={author} />
-      {/* </MainSite> */}
     </ThemeProvider>
   )
 }

@@ -20,11 +20,7 @@ export const SkillsContainer = styled.div`
     flex-wrap: wrap;
     height: 100%;
 
-    @media all and (max-width: 960px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    
 
     @media all and (max-width: 767px) {
         display: block;
@@ -32,36 +28,13 @@ export const SkillsContainer = styled.div`
     }
 `
 
-export const SkillGroup = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media all and (max-width: 960px) {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    @media all and (max-width: 767px) {
-        display: block;
-    }
-`
-
 export const Skill = styled.div`
     font-size: 1.2rem;
     font-weight: bold;
-    color: ${props => (props.front && "#FF5722")
-        || (props.tools && '#26A69A')
-        || (props.python && '#EEFF41')
-        || (props.node && '#039BE5')};
-    box-shadow: ${props => (props.front && "0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2)")
-        || (props.tools && '0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2)')
-        || (props.python && '0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2)')
-        || (props.node && '0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2)')};
-    width: 150px;
-    height: 100px;
+    color: #b12e1f;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2);
+    width: 180px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
